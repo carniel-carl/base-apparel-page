@@ -47,7 +47,7 @@ header img {
 }
 
 .left-section {
-    width: 55%;
+    width: 60%;
     padding: 4rem 8rem;
     background-image: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@ button:hover {
     color: var(--SOFT-RED);
 }
 .right-section {
-   width: 45%;
+   width: 40%;
 }
 
 .bg-img {
