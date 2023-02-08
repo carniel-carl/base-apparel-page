@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Base Apparel coming soon page</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="mobile-logo">
+    <img src="images/logo.svg" aria-label="logo" aria-hidden="true" alt="">
+  </div>
+
+  <main class="container">
+
+    <div class="left-section">
+
+      <header>
+        <img src="images/logo.svg" aria-label="logo" aria-hidden="true" alt="">
+      </header>
+
+      <h1><span class="accent">We're</span> coming soon</h1>
+
+      <p class="text">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+
+      <form action="" id="form">
+        <input type="text" id="email" placeholder="Email Address">
+        <img class="error-icon" id="error-icon" src="images/icon-error.svg" aria-label="error icon" aria-hidden="true"
+          alt="">
+        <button type="submit"><img src="images/icon-arrow.svg" aria-hidden="true" aria-label="arrow icon"></button>
+
+      </form>
+      <small class="error"></small>
+
+    </div>
+
+    <div class="right-section bg-img"></div>
+
+  </main>
+
+  <script>
+    const form = document.getElementById("form");
+    const email = document.getElementById("email");
+    const errorIcon = document.getElementById("error-icon");
+    const error = document.querySelector(".error");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!re.test(email.value)) {
+        email.style.border = "hsl(0, 93%, 68%) solid 2px";
+        error.innerHTML = "Please provide a valid email";
+        errorIcon.style.display = "block"
+      } else {
+        error.innerHTML = null;
+        email.style.border = null;
+        errorIcon.style.display = "none";
+      }
+    })
+
+  </script>
+
+</body>
+
+</html>
